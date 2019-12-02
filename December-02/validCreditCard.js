@@ -51,8 +51,8 @@ const validCreditCard = num => {
       sumEven += result;
     }
   }
-  const finalSumString = (sumEven + sumOdd).toString();
-  if (finalSumString[finalSumString.length - 1] === '0') {
+  
+  if ((sumOdd + sumEven) % 10 === 0) {
     return `${num} passes the test`;
   } else {
     return  `${num} does not pass the test`;
